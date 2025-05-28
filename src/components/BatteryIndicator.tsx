@@ -104,28 +104,11 @@ const BatteryIndicator = ({ batteryLevel, isRunning }: BatteryIndicatorProps) =>
           <div className="text-neon-cyan text-sm text-center mb-2">POWER STATUS</div>
           <div className="flex justify-between items-center">
             <span className="text-xs text-gray-400">Voltage:</span>
-            <span className="text-sm text-white">{(48 + batteryLevel * 0.12).toFixed(1)}V</span>
+            <span className="text-sm text-white">48V</span>
           </div>
           <div className="flex justify-between items-center mt-1">
             <span className="text-xs text-gray-400">Current:</span>
-            <span className="text-sm text-white">{isRunning ? '12.5A' : '0.0A'}</span>
-          </div>
-        </div>
-        
-        {/* Battery cells visualization */}
-        <div className="tron-border rounded-lg p-3 bg-gray-900/50 backdrop-blur-sm">
-          <div className="text-neon-cyan text-sm text-center mb-2">CELL STATUS</div>
-          <div className="grid grid-cols-4 gap-1">
-            {[...Array(8)].map((_, i) => (
-              <div
-                key={i}
-                className={`h-2 rounded-sm ${
-                  i < (batteryLevel / 100) * 8 
-                    ? 'bg-green-400' 
-                    : 'bg-gray-600'
-                }`}
-              />
-            ))}
+            <span className="text-sm text-white">{isRunning ? '24.1A' : '0.0A'}</span>
           </div>
         </div>
       </div>
