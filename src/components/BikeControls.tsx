@@ -10,6 +10,7 @@ const BikeControls = () => {
   const [speed, setSpeed] = useState(0);
   const [batteryLevel, setBatteryLevel] = useState(85);
   const [power, setPower] = useState(0);
+  const [gear, setGear] = useState(1);
 
   // Simulate speed changes when bike is running
   useEffect(() => {
@@ -18,7 +19,7 @@ const BikeControls = () => {
       interval = setInterval(() => {
         setSpeed(prev => {
           const newSpeed = Math.max(0, prev + (Math.random() - 0.5) * 10);
-          return Math.min(80, newSpeed);
+          return Math.min(90, newSpeed);
         });
         
         setPower(prev => {
@@ -36,6 +37,18 @@ const BikeControls = () => {
     
     return () => clearInterval(interval);
   }, [isRunning]);
+
+  // Auto gear shifting based on speed
+  useEffect(() => {
+    if (isRunning) {
+      if (speed < 15) setGear(1);
+      else if (speed < 35) setGear(2);
+      else if (speed < 60) setGear(3);
+      else setGear(4);
+    } else {
+      setGear(1);
+    }
+  }, [speed, isRunning]);
 
   const toggleBike = () => {
     setIsRunning(!isRunning);
@@ -68,7 +81,7 @@ const BikeControls = () => {
           
           {/* Speed Gauge */}
           <div className="lg:col-span-1 order-2 lg:order-1">
-            <SpeedGauge speed={speed} isRunning={isRunning} />
+            <SpeedGauge speed={speed} isRunning={isRunning} gear={gear} />
           </div>
 
           {/* Central Control */}

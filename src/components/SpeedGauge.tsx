@@ -4,10 +4,11 @@ import React from 'react';
 interface SpeedGaugeProps {
   speed: number;
   isRunning: boolean;
+  gear: number;
 }
 
-const SpeedGauge = ({ speed, isRunning }: SpeedGaugeProps) => {
-  const maxSpeed = 80;
+const SpeedGauge = ({ speed, isRunning, gear }: SpeedGaugeProps) => {
+  const maxSpeed = 90;
   const angle = (speed / maxSpeed) * 180 - 90;
   
   return (
@@ -46,7 +47,7 @@ const SpeedGauge = ({ speed, isRunning }: SpeedGaugeProps) => {
             />
             
             {/* Speed markings */}
-            {[0, 20, 40, 60, 80].map((mark, index) => {
+            {[0, 20, 40, 60, 90].map((mark, index) => {
               const markAngle = (mark / maxSpeed) * 180 - 90;
               const x1 = 100 + 60 * Math.cos((markAngle * Math.PI) / 180);
               const y1 = 100 + 60 * Math.sin((markAngle * Math.PI) / 180);
@@ -109,11 +110,33 @@ const SpeedGauge = ({ speed, isRunning }: SpeedGaugeProps) => {
         </div>
       </div>
       
-      <div className="mt-4 tron-border rounded-lg p-3 bg-gray-900/50 backdrop-blur-sm">
-        <div className="text-neon-cyan text-sm text-center">SPEED MONITOR</div>
-        <div className="flex justify-between mt-2 text-xs text-gray-400">
-          <span>0</span>
-          <span>MAX: 80 KM/H</span>
+      <div className="mt-4 space-y-2 w-full max-w-xs">
+        <div className="tron-border rounded-lg p-3 bg-gray-900/50 backdrop-blur-sm">
+          <div className="text-neon-cyan text-sm text-center">SPEED MONITOR</div>
+          <div className="flex justify-between mt-2 text-xs text-gray-400">
+            <span>0</span>
+            <span>MAX: 90 KM/H</span>
+          </div>
+        </div>
+        
+        {/* Gear Indicator */}
+        <div className="tron-border rounded-lg p-3 bg-gray-900/50 backdrop-blur-sm">
+          <div className="text-neon-cyan text-sm text-center mb-2">GEAR</div>
+          <div className="flex justify-center items-center">
+            <div className="text-3xl font-bold text-neon-orange">
+              {gear}
+            </div>
+          </div>
+          <div className="flex justify-center mt-2 space-x-1">
+            {[1, 2, 3, 4].map((g) => (
+              <div
+                key={g}
+                className={`w-3 h-3 rounded-full ${
+                  g <= gear ? 'bg-neon-orange' : 'bg-gray-600'
+                }`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>
