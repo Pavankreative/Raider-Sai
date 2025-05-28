@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,12 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Tron-inspired colors
+				neon: {
+					blue: '#00d4ff',
+					cyan: '#00ffff',
+					orange: '#ff8c00'
 				}
 			},
 			borderRadius: {
@@ -84,11 +91,42 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'glow-pulse': {
+					'0%, 100%': {
+						boxShadow: '0 0 20px #00d4ff, 0 0 40px #00d4ff, 0 0 60px #00d4ff'
+					},
+					'50%': {
+						boxShadow: '0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 30px #00d4ff'
+					}
+				},
+				'circuit-flow': {
+					'0%': {
+						backgroundPosition: '0% 0%'
+					},
+					'100%': {
+						backgroundPosition: '100% 100%'
+					}
+				},
+				'speed-sweep': {
+					'0%': {
+						transform: 'rotate(-90deg)'
+					},
+					'100%': {
+						transform: 'rotate(90deg)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
+				'circuit-flow': 'circuit-flow 3s linear infinite',
+				'speed-sweep': 'speed-sweep 2s ease-in-out infinite alternate'
+			},
+			backgroundImage: {
+				'tron-grid': 'linear-gradient(to right, #00d4ff22 1px, transparent 1px), linear-gradient(to bottom, #00d4ff22 1px, transparent 1px)',
+				'circuit-pattern': 'repeating-linear-gradient(45deg, transparent, transparent 10px, #00d4ff11 10px, #00d4ff11 20px)'
 			}
 		}
 	},
