@@ -1,6 +1,5 @@
-
 import React, { useState, useEffect } from 'react';
-import { Play, Square, Zap, Battery } from 'lucide-react';
+import { Play, Square, Zap, Battery, Bluetooth } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import SpeedGauge from './SpeedGauge';
 import BatteryIndicator from './BatteryIndicator';
@@ -11,6 +10,7 @@ const BikeControls = () => {
   const [batteryLevel, setBatteryLevel] = useState(85);
   const [power, setPower] = useState(0);
   const [gear, setGear] = useState(1);
+  const [isBluetoothConnected, setIsBluetoothConnected] = useState(true);
 
   // Simulate speed changes when bike is running
   useEffect(() => {
@@ -67,9 +67,19 @@ const BikeControls = () => {
       <div className="relative z-10 container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-neon-blue mb-4 tron-glow tracking-wider">
-            RAIDER SAI
-          </h1>
+          <div className="flex items-center justify-center mb-4">
+            <h1 className="text-5xl font-bold text-neon-blue tron-glow tracking-wider">
+              RAIDER SAI
+            </h1>
+            <div className="ml-4 flex items-center">
+              <Bluetooth 
+                className={`w-6 h-6 ${isBluetoothConnected ? 'text-green-400' : 'text-red-400'}`}
+              />
+              <span className={`ml-2 text-sm ${isBluetoothConnected ? 'text-green-400' : 'text-red-400'}`}>
+                {isBluetoothConnected ? 'CONNECTED' : 'DISCONNECTED'}
+              </span>
+            </div>
+          </div>
           <div className="w-32 h-1 bg-gradient-to-r from-transparent via-neon-blue to-transparent mx-auto" />
           <p className="text-neon-cyan mt-4 text-lg tracking-wide">
             EV CONTROL SYSTEM
