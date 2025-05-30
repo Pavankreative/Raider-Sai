@@ -47,7 +47,7 @@ const SpeedGauge = ({ speed, isRunning, gear }: SpeedGaugeProps) => {
             />
             
             {/* Speed markings */}
-            {[0, 20, 40, 60, 90].map((mark, index) => {
+            {[0, 10, 20, 30, 40, 50, 60, 70, 80, 90].map((mark, index) => {
               const markAngle = (mark / maxSpeed) * 180 - 90;
               const x1 = 100 + 60 * Math.cos((markAngle * Math.PI) / 180);
               const y1 = 100 + 60 * Math.sin((markAngle * Math.PI) / 180);
@@ -63,14 +63,16 @@ const SpeedGauge = ({ speed, isRunning, gear }: SpeedGaugeProps) => {
                     y2={y2}
                     stroke="#00d4ff"
                     strokeWidth="2"
+                    className="drop-shadow-[0_0_8px_#00d4ff]"
                   />
                   <text
                     x={100 + 80 * Math.cos((markAngle * Math.PI) / 180)}
                     y={100 + 80 * Math.sin((markAngle * Math.PI) / 180)}
                     fill="#00d4ff"
-                    fontSize="12"
+                    fontSize="10"
                     textAnchor="middle"
                     dominantBaseline="middle"
+                    className="drop-shadow-[0_0_6px_#00d4ff]"
                   >
                     {mark}
                   </text>
@@ -87,7 +89,7 @@ const SpeedGauge = ({ speed, isRunning, gear }: SpeedGaugeProps) => {
               stroke="#ff8c00"
               strokeWidth="3"
               strokeLinecap="round"
-              className={`transition-all duration-500 ${isRunning ? 'drop-shadow-[0_0_10px_#ff8c00]' : ''}`}
+              className={`transition-all duration-500 ${isRunning ? 'drop-shadow-[0_0_15px_#ff8c00]' : ''}`}
             />
             
             {/* Center dot */}
@@ -96,23 +98,23 @@ const SpeedGauge = ({ speed, isRunning, gear }: SpeedGaugeProps) => {
               cy="100"
               r="6"
               fill="#ff8c00"
-              className={isRunning ? 'drop-shadow-[0_0_10px_#ff8c00]' : ''}
+              className={isRunning ? 'drop-shadow-[0_0_15px_#ff8c00]' : ''}
             />
           </svg>
           
           {/* Center display */}
           <div className="absolute inset-0 flex flex-col items-center justify-center">
-            <div className="text-4xl font-bold text-neon-orange mb-2">
+            <div className="text-4xl font-bold text-neon-orange mb-2 drop-shadow-[0_0_10px_#ff8c00]">
               {speed.toFixed(0)}
             </div>
-            <div className="text-sm text-neon-cyan">KM/H</div>
+            <div className="text-sm text-neon-cyan drop-shadow-[0_0_6px_#00ffff]">KM/H</div>
           </div>
         </div>
       </div>
       
       <div className="mt-4 space-y-2 w-full max-w-xs">
         <div className="tron-border rounded-lg p-3 bg-gray-900/50 backdrop-blur-sm">
-          <div className="text-neon-cyan text-sm text-center">SPEED MONITOR</div>
+          <div className="text-neon-cyan text-sm text-center drop-shadow-[0_0_6px_#00ffff]">SPEED MONITOR</div>
           <div className="flex justify-between mt-2 text-xs text-gray-400">
             <span>0</span>
             <span>MAX: 90 KM/H</span>
@@ -121,18 +123,20 @@ const SpeedGauge = ({ speed, isRunning, gear }: SpeedGaugeProps) => {
         
         {/* Gear Indicator */}
         <div className="tron-border rounded-lg p-3 bg-gray-900/50 backdrop-blur-sm">
-          <div className="text-neon-cyan text-sm text-center mb-2">GEAR</div>
+          <div className="text-neon-cyan text-sm text-center mb-2 drop-shadow-[0_0_6px_#00ffff]">GEAR</div>
           <div className="flex justify-center items-center">
-            <div className="text-3xl font-bold text-neon-orange">
-              {gear}
+            <div className="text-3xl font-bold text-neon-orange drop-shadow-[0_0_10px_#ff8c00]">
+              {gear === 0 ? 'N' : gear}
             </div>
           </div>
           <div className="flex justify-center mt-2 space-x-1">
+            {/* Neutral indicator */}
+            <div className={`w-3 h-3 rounded-full ${gear === 0 ? 'bg-neon-orange drop-shadow-[0_0_6px_#ff8c00]' : 'bg-gray-600'}`} />
             {[1, 2, 3, 4].map((g) => (
               <div
                 key={g}
                 className={`w-3 h-3 rounded-full ${
-                  g <= gear ? 'bg-neon-orange' : 'bg-gray-600'
+                  g <= gear && gear > 0 ? 'bg-neon-orange drop-shadow-[0_0_6px_#ff8c00]' : 'bg-gray-600'
                 }`}
               />
             ))}

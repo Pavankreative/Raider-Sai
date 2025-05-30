@@ -9,7 +9,7 @@ const BikeControls = () => {
   const [speed, setSpeed] = useState(0);
   const [batteryLevel, setBatteryLevel] = useState(85);
   const [power, setPower] = useState(0);
-  const [gear, setGear] = useState(1);
+  const [gear, setGear] = useState(0); // Start with neutral gear
   const [isBluetoothConnected, setIsBluetoothConnected] = useState(true);
 
   // Simulate speed changes when bike is running
@@ -40,13 +40,13 @@ const BikeControls = () => {
 
   // Auto gear shifting based on speed
   useEffect(() => {
-    if (isRunning) {
+    if (isRunning && speed > 5) { // Only shift out of neutral when moving
       if (speed < 15) setGear(1);
       else if (speed < 35) setGear(2);
       else if (speed < 60) setGear(3);
       else setGear(4);
-    } else {
-      setGear(1);
+    } else if (!isRunning || speed <= 5) {
+      setGear(0); // Neutral when stopped or very slow
     }
   }, [speed, isRunning]);
 
