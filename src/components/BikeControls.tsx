@@ -57,7 +57,7 @@ const BikeControls = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden">
       {/* Background grid pattern */}
       <div className="absolute inset-0 bg-tron-grid opacity-20" 
            style={{ backgroundSize: '50px 50px' }} />
