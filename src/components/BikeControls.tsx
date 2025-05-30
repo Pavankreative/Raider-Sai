@@ -19,7 +19,7 @@ const BikeControls = () => {
       interval = setInterval(() => {
         setSpeed(prev => {
           const newSpeed = Math.max(0, prev + (Math.random() - 0.5) * 10);
-          return Math.min(90, newSpeed);
+          return Math.min(100, newSpeed); // Changed max speed to 100
         });
         
         setPower(prev => {
@@ -44,7 +44,8 @@ const BikeControls = () => {
       if (speed < 15) setGear(1);
       else if (speed < 35) setGear(2);
       else if (speed < 60) setGear(3);
-      else setGear(4);
+      else if (speed < 85) setGear(4);
+      else setGear(5); // Added gear 5 for higher speeds
     } else if (!isRunning || speed <= 5) {
       setGear(0); // Neutral when stopped or very slow
     }
@@ -153,7 +154,7 @@ const BikeControls = () => {
         <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-4">
           <div className="tron-border rounded-lg p-4 bg-gray-900/30 text-center">
             <div className="text-neon-cyan text-sm">RANGE</div>
-            <div className="text-white text-lg font-bold">90 KM</div>
+            <div className="text-white text-lg font-bold">120 KM</div>
           </div>
           <div className="tron-border rounded-lg p-4 bg-gray-900/30 text-center">
             <div className="text-neon-cyan text-sm">TEMP</div>
