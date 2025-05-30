@@ -102,7 +102,7 @@ const BikeControls = () => {
                 onClick={toggleBike}
                 className={`
                   w-32 h-32 rounded-full text-2xl font-bold tracking-wider
-                  transition-all duration-300 transform hover:scale-105
+                  transition-all duration-300 transform hover:scale-105 flex items-center justify-center
                   ${isRunning 
                     ? 'bg-red-600/20 border-2 border-red-400 text-red-400 hover:bg-red-600/30 animate-glow-pulse' 
                     : 'bg-neon-blue/20 border-2 border-neon-blue text-neon-blue hover:bg-neon-blue/30 tron-glow'
@@ -154,7 +154,7 @@ const BikeControls = () => {
         <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-4">
           <div className="tron-border rounded-lg p-4 bg-gray-900/30 text-center">
             <div className="text-neon-cyan text-sm">RANGE</div>
-            <div className="text-white text-lg font-bold">120 KM</div>
+            <div className="text-white text-lg font-bold">90 KM</div>
           </div>
           <div className="tron-border rounded-lg p-4 bg-gray-900/30 text-center">
             <div className="text-neon-cyan text-sm">TEMP</div>
