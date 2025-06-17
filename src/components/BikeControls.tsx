@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Play, Square, Zap, Battery } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -93,7 +94,7 @@ const BikeControls = () => {
                 onClick={toggleBike}
                 className={`
                   w-32 h-32 rounded-full text-2xl font-bold tracking-wider
-                  transition-all duration-300 transform hover:scale-105 flex items-center justify-center
+                  transition-all duration-300 transform hover:scale-105 flex flex-col items-center justify-center
                   ${isRunning 
                     ? 'bg-red-600/20 border-2 border-red-400 text-red-400 hover:bg-red-600/30 animate-glow-pulse' 
                     : 'bg-neon-blue/20 border-2 border-neon-blue text-neon-blue hover:bg-neon-blue/30 tron-glow'
@@ -102,13 +103,13 @@ const BikeControls = () => {
               >
                 {isRunning ? (
                   <>
-                    <Square className="w-8 h-8 mr-2" />
-                    STOP
+                    <Square className="w-8 h-8 mb-1" />
+                    <span>STOP</span>
                   </>
                 ) : (
                   <>
-                    <Play className="w-8 h-8 mr-2" />
-                    START
+                    <Play className="w-8 h-8 mb-1" />
+                    <span>START</span>
                   </>
                 )}
               </Button>
