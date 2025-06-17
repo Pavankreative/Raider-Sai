@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from 'react';
 import { Play, Square, Zap, Battery } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -68,20 +66,20 @@ const BikeControls = () => {
       
       <div className="relative z-10 container mx-auto px-4 py-8">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <div className="flex items-center justify-center mb-4">
-            <h1 className="text-5xl font-bold text-neon-blue tron-glow tracking-wider">
+            <h1 className="text-3xl md:text-5xl font-bold text-neon-blue tron-glow tracking-wider">
               RAIDER SAI
             </h1>
           </div>
           <div className="w-32 h-1 bg-gradient-to-r from-transparent via-neon-blue to-transparent mx-auto" />
-          <p className="text-neon-cyan mt-4 text-lg tracking-wide">
+          <p className="text-neon-cyan mt-4 text-sm md:text-lg tracking-wide">
             EV CONTROL SYSTEM
           </p>
         </div>
 
         {/* Main Control Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           
           {/* Speed Gauge */}
           <div className="lg:col-span-1 order-2 lg:order-1">
@@ -90,11 +88,11 @@ const BikeControls = () => {
 
           {/* Central Control */}
           <div className="lg:col-span-1 order-1 lg:order-2 flex flex-col items-center justify-center">
-            <div className="tron-border rounded-2xl p-8 bg-gray-900/50 backdrop-blur-sm mb-8">
+            <div className="tron-border rounded-2xl p-6 bg-gray-900/50 backdrop-blur-sm mb-6">
               <Button
                 onClick={toggleBike}
                 className={`
-                  w-32 h-32 rounded-full text-2xl font-bold tracking-wider
+                  w-24 h-24 md:w-32 md:h-32 rounded-full text-lg md:text-2xl font-bold tracking-wider
                   transition-all duration-300 transform hover:scale-105 flex flex-col items-center justify-center
                   ${isRunning 
                     ? 'bg-red-600/20 border-2 border-red-400 text-red-400 hover:bg-red-600/30 animate-glow-pulse' 
@@ -104,32 +102,32 @@ const BikeControls = () => {
               >
                 {isRunning ? (
                   <>
-                    <Square className="w-6 h-6 mb-1" />
-                    <span>STOP</span>
+                    <Square className="w-4 h-4 md:w-6 md:h-6 mb-1" />
+                    <span className="text-xs md:text-base">STOP</span>
                   </>
                 ) : (
                   <>
-                    <Play className="w-6 h-6 mb-1" />
-                    <span>START</span>
+                    <Play className="w-4 h-4 md:w-6 md:h-6 mb-1" />
+                    <span className="text-xs md:text-base">START</span>
                   </>
                 )}
               </Button>
             </div>
 
             {/* Status Display */}
-            <div className="tron-border rounded-xl p-6 bg-gray-900/50 backdrop-blur-sm w-full max-w-sm">
+            <div className="tron-border rounded-xl p-4 bg-gray-900/50 backdrop-blur-sm w-full max-w-sm">
               <div className="text-center">
-                <div className="text-sm text-neon-cyan mb-2">STATUS</div>
-                <div className={`text-2xl font-bold ${isRunning ? 'text-green-400' : 'text-red-400'}`}>
+                <div className="text-xs text-neon-cyan mb-2">STATUS</div>
+                <div className={`text-lg md:text-2xl font-bold ${isRunning ? 'text-green-400' : 'text-red-400'}`}>
                   {isRunning ? 'ACTIVE' : 'STANDBY'}
                 </div>
-                <div className="mt-4 flex justify-center items-center space-x-4">
+                <div className="mt-3 flex justify-center items-center space-x-3">
                   <div className="flex items-center">
-                    <Zap className="w-4 h-4 text-neon-orange mr-1" />
-                    <span className="text-sm text-neon-orange">{power.toFixed(0)}%</span>
+                    <Zap className="w-3 h-3 text-neon-orange mr-1" />
+                    <span className="text-xs text-neon-orange">{power.toFixed(0)}%</span>
                   </div>
                   <div className="w-1 h-1 bg-neon-cyan rounded-full" />
-                  <div className="text-sm text-neon-cyan">
+                  <div className="text-xs text-neon-cyan">
                     {speed.toFixed(0)} KM/H
                   </div>
                 </div>
@@ -144,18 +142,18 @@ const BikeControls = () => {
         </div>
 
         {/* Bottom Stats */}
-        <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-4">
-          <div className="tron-border rounded-lg p-4 bg-gray-900/30 text-center">
-            <div className="text-neon-cyan text-sm">RANGE</div>
-            <div className="text-white text-lg font-bold">90 KM</div>
+        <div className="mt-8 grid grid-cols-2 md:grid-cols-3 gap-3">
+          <div className="tron-border rounded-lg p-3 bg-gray-900/30 text-center">
+            <div className="text-neon-cyan text-xs">RANGE</div>
+            <div className="text-white text-sm md:text-lg font-bold">90 KM</div>
           </div>
-          <div className="tron-border rounded-lg p-4 bg-gray-900/30 text-center">
-            <div className="text-neon-cyan text-sm">TEMP</div>
-            <div className="text-white text-lg font-bold">{(25 + speed * 0.3).toFixed(0)}°C</div>
+          <div className="tron-border rounded-lg p-3 bg-gray-900/30 text-center">
+            <div className="text-neon-cyan text-xs">TEMP</div>
+            <div className="text-white text-sm md:text-lg font-bold">{(25 + speed * 0.3).toFixed(0)}°C</div>
           </div>
-          <div className="tron-border rounded-lg p-4 bg-gray-900/30 text-center">
-            <div className="text-neon-cyan text-sm">MODE</div>
-            <div className="text-white text-lg font-bold">ECO</div>
+          <div className="tron-border rounded-lg p-3 bg-gray-900/30 text-center">
+            <div className="text-neon-cyan text-xs">MODE</div>
+            <div className="text-white text-sm md:text-lg font-bold">ECO</div>
           </div>
         </div>
       </div>
@@ -164,4 +162,3 @@ const BikeControls = () => {
 };
 
 export default BikeControls;
-
