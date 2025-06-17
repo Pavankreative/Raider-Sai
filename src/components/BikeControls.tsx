@@ -1,4 +1,5 @@
 
+
 import React, { useState, useEffect } from 'react';
 import { Play, Square, Zap, Battery } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -103,12 +104,12 @@ const BikeControls = () => {
               >
                 {isRunning ? (
                   <>
-                    <Square className="w-8 h-8 mb-1" />
+                    <Square className="w-6 h-6 mb-1" />
                     <span>STOP</span>
                   </>
                 ) : (
                   <>
-                    <Play className="w-8 h-8 mb-1" />
+                    <Play className="w-6 h-6 mb-1" />
                     <span>START</span>
                   </>
                 )}
@@ -163,3 +164,4 @@ const BikeControls = () => {
 };
 
 export default BikeControls;
+
