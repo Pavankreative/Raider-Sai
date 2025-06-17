@@ -1,6 +1,5 @@
-
 import React, { useState, useEffect } from 'react';
-import { Play, Square, Zap, Battery, Bluetooth } from 'lucide-react';
+import { Play, Square, Zap, Battery } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import SpeedGauge from './SpeedGauge';
 import BatteryIndicator from './BatteryIndicator';
@@ -73,14 +72,6 @@ const BikeControls = () => {
             <h1 className="text-5xl font-bold text-neon-blue tron-glow tracking-wider">
               RAIDER SAI
             </h1>
-            <div className="ml-4 flex items-center">
-              <Bluetooth 
-                className={`w-6 h-6 ${isBluetoothConnected ? 'text-green-400' : 'text-red-400'}`}
-              />
-              <span className={`ml-2 text-sm ${isBluetoothConnected ? 'text-green-400' : 'text-red-400'}`}>
-                {isBluetoothConnected ? 'CONNECTED' : 'DISCONNECTED'}
-              </span>
-            </div>
           </div>
           <div className="w-32 h-1 bg-gradient-to-r from-transparent via-neon-blue to-transparent mx-auto" />
           <p className="text-neon-cyan mt-4 text-lg tracking-wide">
