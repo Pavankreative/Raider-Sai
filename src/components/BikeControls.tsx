@@ -37,14 +37,13 @@ const BikeControls = () => {
     return () => clearInterval(interval);
   }, [isRunning]);
 
-  // Auto gear shifting based on speed
+  // Four-speed demo estimate only; this does not command the manual gearbox.
   useEffect(() => {
     if (isRunning && speed > 5) { // Only shift out of neutral when moving
       if (speed < 15) setGear(1);
       else if (speed < 35) setGear(2);
       else if (speed < 60) setGear(3);
-      else if (speed < 85) setGear(4);
-      else setGear(5); // Added gear 5 for higher speeds
+      else setGear(4);
     } else if (!isRunning || speed <= 5) {
       setGear(0); // Neutral when stopped or very slow
     }
@@ -52,7 +51,7 @@ const BikeControls = () => {
 
   const toggleBike = () => {
     setIsRunning(!isRunning);
-    console.log(`Raider Sai ${!isRunning ? 'STARTED' : 'STOPPED'}`);
+    console.log(`Raider Sai demo ${!isRunning ? 'STARTED' : 'STOPPED'}`);
   };
 
   return (
@@ -74,7 +73,10 @@ const BikeControls = () => {
           </div>
           <div className="w-32 h-1 bg-gradient-to-r from-transparent via-neon-blue to-transparent mx-auto" />
           <p className="text-neon-cyan mt-4 text-sm md:text-lg tracking-wide">
-            EV CONTROL SYSTEM
+            EV CONTROL INTERFACE — SIMULATION DEMO
+          </p>
+          <p className="mt-2 text-sm text-amber-300" role="status">
+            Simulated telemetry. No ESP32/BLE hardware is connected.
           </p>
         </div>
 
@@ -103,12 +105,12 @@ const BikeControls = () => {
                 {isRunning ? (
                   <>
                     <Square className="w-4 h-4 md:w-6 md:h-6 mb-1" />
-                    <span className="text-xs md:text-base">STOP</span>
+                    <span className="text-xs md:text-base">STOP DEMO</span>
                   </>
                 ) : (
                   <>
                     <Play className="w-4 h-4 md:w-6 md:h-6 mb-1" />
-                    <span className="text-xs md:text-base">START</span>
+                    <span className="text-xs md:text-base">START DEMO</span>
                   </>
                 )}
               </Button>
