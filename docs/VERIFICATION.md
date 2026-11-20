@@ -4,11 +4,11 @@
 
 The repository's 2026-11-19 verification record reported:
 
-- \`npm ci --no-audit --no-fund\`: completed from the then-current lockfile.
-- \`npm run lint\`: passed with zero errors; seven React Fast Refresh mixed-export warnings remained at that time.
-- \`npx tsc --noEmit -p tsconfig.app.json\`: passed.
-- \`npm run build\`: passed; production bundle generated.
-- \`git diff --check\`: passed.
+- npm ci --no-audit --no-fund: completed from the then-current lockfile.
+- npm run lint: passed with zero errors; seven React Fast Refresh mixed-export warnings remained at that time.
+- npx tsc --noEmit -p tsconfig.app.json: passed.
+- npm run build: passed; production bundle generated.
+- git diff --check: passed.
 - Environment recorded: Node 24.22.3, npm 11.9.0.
 
 Those checks pre-date the 2026-11-20 documentation, dashboard-component, Vite and Capacitor configuration edits. They must not be treated as a fresh verification of the current commit.
@@ -19,15 +19,15 @@ Committed on 2026-11-20:
 
 - Rewritten README with a distinct physical-prototype/software-demo boundary.
 - Revised hardware evidence, measurement register and control-interface documents.
-- Added two project-report photographs under \`docs/images/\`.
+- Added two project-report photographs under docs/images/.
 - Reworked dashboard copy to label speed, SOC, load, temperature and gear as simulated/demo values.
-- Removed the remote Lovable \`server.url\` from Capacitor configuration so the app loads its locally built \`dist\` assets.
+- Removed the remote Lovable server.url from Capacitor configuration so the app loads its locally built dist assets.
 - Removed the Lovable Vite development tagger.
 - Replaced generic Lovable HTML metadata with RAIDER SAI project metadata.
 
 ## Verification still required locally
 
-A fresh checkout on the current \`main\` branch should run:
+A fresh checkout on the current main branch should run:
 
 \`\`\`bash
 npm ci
@@ -42,7 +42,7 @@ The container used for this repository update could not clone the GitHub reposit
 
 Source inspection confirms that the web dashboard uses local synthetic state only. No ESP32 firmware, BLE connection, ignition relay control, sensor acquisition, hardware-in-the-loop test, latency measurement, dynamometer trace, battery-range test or vehicle road test was executed as part of this repository update.
 
-The physical prototype photographs document the build; they do not validate performance figures. See [HARDWARE_PROOF.md](HARDWARE_PROOF.md), [MEASUREMENT_REGISTER.md](MEASUREMENT_REGISTER.md) and [CONTROL_INTERFACE.md](CONTROL_INTERFACE.md).
+The physical prototype photographs document the build; they do not validate performance figures. See HARDWARE_PROOF.md, MEASUREMENT_REGISTER.md and CONTROL_INTERFACE.md.
 
 ## Publication status
 
