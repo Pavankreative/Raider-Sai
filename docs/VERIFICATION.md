@@ -19,7 +19,7 @@ Committed on 2026-11-20:
 
 - Rewritten README with a distinct physical-prototype/software-demo boundary.
 - Revised hardware evidence, measurement register and control-interface documents.
-- Added two project-report photographs under docs/images/.
+- Added the original project-prototype photograph under docs/images/.
 - Reworked dashboard copy to label speed, SOC, load, temperature and gear as simulated/demo values.
 - Removed the remote Lovable server.url from Capacitor configuration so the app loads its locally built dist assets.
 - Removed the Lovable Vite development tagger.
@@ -27,14 +27,12 @@ Committed on 2026-11-20:
 
 ## Verification still required locally
 
-A fresh checkout on the current main branch should run:
+A fresh checkout on the current main branch should run these commands:
 
-\`\`\`bash
-npm ci
-npm run lint
-npx tsc --noEmit -p tsconfig.app.json
-npm run build
-\`\`\`
+    npm ci
+    npm run lint
+    npx tsc --noEmit -p tsconfig.app.json
+    npm run build
 
 The container used for this repository update could not clone the GitHub repository because outbound DNS/network access to GitHub was unavailable. Therefore, the updated React code and configuration have **not** been freshly built or linted in this session. Run the commands above before merging further code or producing a release.
 
