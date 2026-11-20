@@ -21,9 +21,7 @@ The image is included in the supplied project report and shows the assembled mot
 
 ### Chain-drive and gearbox integration
 
-![RAIDER SAI chain and sprocket integration](images/drivetrain-integration.jpg)
-
-The image shows the chain/sprocket integration area documented during the drivetrain development. It supports the existence of a physical drivetrain modification, but does not establish tooth-contact stress, chain tension, fatigue life, alignment tolerance or durability.
+The original thesis includes close-up workshop photographs of the chain/sprocket and gearbox integration area. Those photographs support the existence of a physical drivetrain modification, but they do not establish tooth-contact stress, chain tension, fatigue life, alignment tolerance or durability. The full source report is not reproduced in this repository.
 
 ## Drivetrain iteration evidence
 
