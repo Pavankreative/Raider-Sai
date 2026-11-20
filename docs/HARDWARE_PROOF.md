@@ -35,7 +35,11 @@ The report's pages describing the three iterations are the primary source for th
 
 ## Contribution boundary
 
-The original report identifies Pavan as the team leader. This repository does not claim that one person independently performed every design, procurement, machining, welding, electrical and test task. A task-by-task individual contribution matrix has not been supplied, so contributions are described at project/team level unless separately documented.
+Pavan Kumar Karsinapu originated the project and carried the primary technical responsibility from concept and background research through system design, theory and calculations, drivetrain development, project testing and optimisation, technical documentation, publication and subsequent development.
+
+The other six student team members contributed to workshop fabrication and assembly activities under Pavan's direction. They are acknowledged contributors in the published paper. Their workshop participation is recognised without attributing the project's core conception, engineering design, analytical work or documentation to them.
+
+This statement records the project lead's account of the division of work. The original report identifies Pavan as team leader; the detailed task allocation above is the clarification supplied by the project lead.
 
 ## What the photographs establish
 
