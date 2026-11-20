@@ -15,9 +15,15 @@ This document records what the supplied 2022–2023 project report shows and wha
 
 ### Completed motorcycle retrofit
 
-![RAIDER SAI electric motorcycle prototype](images/raider-sai-prototype.jpg)
+![RAIDER SAI electric motorcycle prototype](images/raider-sai-prototype.webp)
 
-The image is included in the supplied project report and shows the assembled motorcycle conversion, including the added battery enclosure and the RAIDER SAI tank marking. It is visual evidence of the prototype configuration, not a speed or range measurement.
+The image is a conservatively enhanced copy of the first original photograph supplied for the project. It shows the assembled motorcycle conversion, including the added battery enclosure and RAIDER SAI tank marking. Denoising, moderate sharpening and resizing were applied; no mechanical details were added or reconstructed. It is visual evidence of the prototype configuration, not a speed or range measurement.
+
+### Alternate three-quarter view
+
+![Alternate RAIDER SAI prototype view](images/raider-sai-three-quarter.webp)
+
+This image is a conservatively enhanced copy of the second original photograph. It provides an alternate view of the same prototype. It does not add independent evidence of vehicle performance or test results.
 
 ### Chain-drive and gearbox integration
 
