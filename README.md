@@ -247,8 +247,7 @@ Raider-Sai/
 │   ├── MEASUREMENT_REGISTER.md
 │   ├── VERIFICATION.md
 │   └── images/
-│       ├── raider-sai-prototype.jpg
-│       └── drivetrain-integration.jpg
+│       └── raider-sai-prototype.jpg
 └── src/
     ├── components/
     │   ├── BikeControls.tsx
