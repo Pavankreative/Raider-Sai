@@ -26,7 +26,7 @@ A student-led physical EV conversion project, followed by a separate browser-bas
 | Original academic project title | Design, Fabrication and Analysis of Electric Bike with 4-Speed Gear System |
 | Physical build period | February–April 2023 |
 | Project team | 7 mechanical-engineering students |
-| My role | Project team lead; mechanical integration and drivetrain-development coordination |
+| My role | Project originator and lead engineer; primary technical ownership from concept through publication and subsequent development |
 | Vehicle architecture | Existing two-wheeler platform converted to electric traction |
 | Traction motor | 48 V, 1,000 W BLDC motor; 3,000 RPM rated speed |
 | Battery bank | Four 12 V, 28 Ah batteries in series — nominal 48 V, 28 Ah |
@@ -35,6 +35,21 @@ A student-led physical EV conversion project, followed by a separate browser-bas
 | Later digital work | React/TypeScript supervisory-interface simulation; ESP32/BLE concept documented separately |
 
 The original project thesis is a 62-page academic report. It documents the component specifications, three drivetrain iterations, calculations and photographs of the prototype and workshop work. The thesis also contains calculation and evidence limitations; these are stated explicitly in this repository rather than being presented as verified vehicle-performance data.
+
+
+## My contribution and project ownership
+
+I originated RAIDER SAI and carried the primary engineering work from the initial idea through the published project report and later development. My work covered:
+
+- **Concept and research:** Identified the conversion concept, investigated the electric traction architecture and evaluated the motor, battery, controller and transmission arrangement.
+- **System design:** Developed the mechanical system concept and the integration approach for the 48 V BLDC traction system with the retained four-speed motorcycle gearbox.
+- **Theory and calculations:** Prepared the engineering formulations and calculations used in the project, including motor power/torque, battery energy, drivetrain and vehicle-performance estimates. The calculation register records which source calculations remain unreconciled or unvalidated.
+- **Drivetrain development:** Investigated the first two chain-drive configurations, analysed the problems encountered during speed transfer and gear changes, and developed the final documented sprocket arrangement.
+- **Testing and optimisation:** Planned and led the project-level evaluation and iterative improvement process. The available thesis records test procedures and selected reported outcomes, but it does not preserve a complete calibrated raw-data package; see the measurement register.
+- **Documentation and publication:** Prepared the technical documentation and project reporting and developed the published IRJET paper associated with RAIDER SAI.
+- **Subsequent development:** Continued the project beyond the original workshop build through the later supervisory-interface and embedded-control concept work. The current web dashboard remains a simulation-only demonstration.
+
+The other six student team members contributed to workshop fabrication and assembly activities under my direction. Their participation is acknowledged in the published paper. This contribution description distinguishes my primary concept, design, analytical, testing, optimisation and documentation work from the team's workshop support.
 
 ## Two workstreams — keep their evidence separate
 
