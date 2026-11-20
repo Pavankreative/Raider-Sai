@@ -258,6 +258,7 @@ Raider-Sai/
 ├── capacitor.config.ts
 ├── docs/
 │   ├── CONTROL_INTERFACE.md
+│   ├── CONTRIBUTIONS.md
 │   ├── HARDWARE_PROOF.md
 │   ├── MEASUREMENT_REGISTER.md
 │   ├── VERIFICATION.md
@@ -304,7 +305,7 @@ This is the published article associated with the project. Other manuscripts are
 
 ## Acknowledgement and attribution
 
-The physical retrofit was completed by a seven-member student team at Nova College of Engineering and Technology, affiliated to JNTU Kakinada. Pavan Kumar Karsinapu is identified as the team leader in the original project report. The report acknowledges project guidance from the department faculty.
+The physical retrofit was completed by a seven-member student team at Nova College of Engineering and Technology, affiliated to JNTU Kakinada. Pavan Kumar Karsinapu originated and led the engineering work described in CONTRIBUTIONS.md. The other six team members contributed to workshop fabrication and assembly under his direction and are acknowledged contributors in the published paper. The report also acknowledges project guidance from the department faculty.
 
 The photographs in docs/images/ are cropped from the supplied project-report photographs. They are included to document the physical prototype and drivetrain installation, not to imply instrument calibration or performance validation.
 
