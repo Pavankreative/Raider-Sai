@@ -1,14 +1,10 @@
-
-import { CapacitorConfig } from '@capacitor/cli';
+import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'app.lovable.1543baa5bdcd464daa1886284acbc548',
-  appName: 'sai-tron-rider-control',
+  appId: 'com.pavankreative.raidersai',
+  appName: 'RAIDER SAI Demo',
   webDir: 'dist',
-  server: {
-    url: 'https://1543baa5-bdcd-464d-aa18-86284acbc548.lovableproject.com?forceHideBadge=true',
-    cleartext: true
-  },
+  // No remote server.url: Capacitor should load the locally built web assets.
   plugins: {
     SplashScreen: {
       launchShowDuration: 3000,
