@@ -4,7 +4,7 @@
 A student-led physical EV conversion project, followed by a separate browser-based supervisory-interface demonstration. The work combined mechanical integration, chain-drive iteration, workshop fabrication and a later ESP32/BLE control concept.
 
 <p align="center">
-  <img src="docs/images/raider-sai-prototype.jpg" alt="RAIDER SAI electric motorcycle prototype" width="82%">
+  <img src="docs/images/raider-sai-prototype.webp" alt="RAIDER SAI electric motorcycle prototype" width="82%">
 </p>
 
 <p align="center">
@@ -70,9 +70,14 @@ It is **not** the firmware or control implementation. There is no ESP32 firmware
 ## Physical prototype gallery
 
 <p align="center">
-  <img src="docs/images/raider-sai-prototype.jpg" alt="Side view of the RAIDER SAI electric-motorcycle prototype" width="88%">
+  <img src="docs/images/raider-sai-prototype.webp" alt="Side view of the RAIDER SAI electric-motorcycle prototype" width="88%">
 </p>
-<p align="center"><em>Completed prototype documented in the original project report.</em></p>
+<p align="center"><em>Completed prototype documented in the original project report. The image is a conservatively enhanced copy of the original photograph; no hardware details were added or reconstructed.</em></p>
+
+<p align="center">
+  <img src="docs/images/raider-sai-three-quarter.webp" alt="Alternate three-quarter view of the RAIDER SAI electric-motorcycle prototype" width="82%">
+</p>
+<p align="center"><em>Alternate view from the second original project photograph.</em></p>
 
 The original thesis also includes close-up workshop photographs of the chain/sprocket and gearbox integration. The three drivetrain iterations are summarised below and in the hardware evidence register.
 
@@ -263,7 +268,8 @@ Raider-Sai/
 │   ├── MEASUREMENT_REGISTER.md
 │   ├── VERIFICATION.md
 │   └── images/
-│       └── raider-sai-prototype.jpg
+│       ├── raider-sai-prototype.webp
+│       └── raider-sai-three-quarter.webp
 └── src/
     ├── components/
     │   ├── BikeControls.tsx
