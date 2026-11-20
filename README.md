@@ -59,12 +59,7 @@ It is **not** the firmware or control implementation. There is no ESP32 firmware
 </p>
 <p align="center"><em>Completed prototype documented in the original project report.</em></p>
 
-<p align="center">
-  <img src="docs/images/drivetrain-integration.jpg" alt="Chain and sprocket drivetrain integration on the motorcycle" width="88%">
-</p>
-<p align="center"><em>Chain-and-sprocket / gearbox integration area documented during drivetrain development.</em></p>
-
-See the hardware evidence register in docs/HARDWARE_PROOF.md for the source and scope of these photographs.
+The original thesis also includes close-up workshop photographs of the chain/sprocket and gearbox integration. The three drivetrain iterations are summarised below and in the hardware evidence register.
 
 ## System architecture
 
