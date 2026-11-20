@@ -1,49 +1,71 @@
-# Physical prototype evidence — owner completion template
+# Physical prototype evidence
 
-**Status: template awaiting selected workshop photographs and an audited individual
-task breakdown. Empty entries are not completed tests.** Keep private contact,
-student-identification and financial details out of public evidence.
+This document records what the supplied 2022–2023 project report shows and what it does not prove. It separates physical-build evidence from calculated performance claims.
 
 ## Build identity
 
-- Platform: RAIDER SAI 48 V / 1 kW electric-motorcycle retrofit.
-- Build period: February–April 2023, according to the supplied project record.
-- Team: seven members; Pavan Kumar Karsinapu identified as team leader.
-- Workshop/institution and supervisor: [confirm names and publication permission].
-- Source build-report revision/page references: [add].
+- **Project:** RAIDER SAI — 48 V electric-motorcycle retrofit with a four-speed manual transmission
+- **Build period:** February–April 2023, as recorded in the project history
+- **Team:** Seven mechanical-engineering students
+- **Team lead:** Pavan Kumar Karsinapu
+- **Academic report title:** Design, Fabrication and Analysis of Electric Bike with 4-Speed Gear System
+- **Institution:** Nova College of Engineering and Technology, affiliated to JNTU Kakinada
 
-## Photograph register
+## Selected physical photographs
 
-Upload selected images to `docs/images/` and replace these entries with links.
-Do not use stock or AI-generated images as fabrication evidence.
+### Completed motorcycle retrofit
 
-| ID | Required view | Date / source | What it demonstrates | File |
-|---|---|---|---|---|
-| HW-01 | Complete assembled retrofit | [add] | Vehicle integration | [add] |
-| HW-02 | Motor and gearbox mounts | [add] | Packaging and mounting arrangement | [add] |
-| HW-03 | Original drivetrain configuration | [add] | Baseline arrangement | [add] |
-| HW-04 | Intermediate coupling / binding investigation | [add] | Iteration and observed issue | [add] |
-| HW-05 | Custom 15 cm master sprocket fabrication | [add] | Fabrication process and final arrangement | [add] |
-| HW-06 | Battery bank and controller integration | [add] | Component installation | [add] |
-| HW-07 | Instrumented test setup | [add] | Measurement method, not performance by itself | [add] |
+![RAIDER SAI electric motorcycle prototype](images/raider-sai-prototype.jpg)
 
-## Individual responsibility
+The image is included in the supplied project report and shows the assembled motorcycle conversion, including the added battery enclosure and the RAIDER SAI tank marking. It is visual evidence of the prototype configuration, not a speed or range measurement.
 
-Separate personal execution, team execution and supervision. Do not claim all
-fabrication or analysis solely because of the team-lead title.
+### Chain-drive and gearbox integration
 
-| Task | Pavan's actual contribution | Other contributors | Evidence | Reviewer |
-|---|---|---|---|---|
-| Component selection / packaging | [add] | [add] | [add] | [add] |
-| CAD / drawings | [add] | [add] | [add] | [add] |
-| Sprocket and chain-drive modifications | [add] | [add] | [add] | [add] |
-| Machining / welding / assembly | [add] | [add] | [add] | [add] |
-| Electrical integration | [add] | [add] | [add] | [add] |
-| Test planning / data collection | [add] | [add] | [add] | [add] |
+![RAIDER SAI chain and sprocket integration](images/drivetrain-integration.jpg)
 
-## Test evidence checklist
+The image shows the chain/sprocket integration area documented during the drivetrain development. It supports the existence of a physical drivetrain modification, but does not establish tooth-contact stress, chain tension, fatigue life, alignment tolerance or durability.
 
-For each performance claim provide raw data, instruments/calibration, operating
-conditions, sample count, calculation, uncertainty and a dated reviewer record.
-A planned test is not a completed DVP&R result. Retrospective documentation must
-carry its actual preparation date rather than an invented 2023 release date.
+## Drivetrain iteration evidence
+
+The report documents three physical configurations:
+
+1. **Case I:** equal approximately 65 mm diameter, 15-tooth sprockets; the arrangement did not achieve the desired speed increase.
+2. **Case II:** a revised connection increased wheel rotation but resulted in unacceptable power transfer during gear changes; the report describes it as unsafe.
+3. **Case III:** a custom approximately 150 mm master/driver sprocket was attached by welding and paired with an approximately 65 mm driven sprocket.
+
+The report's pages describing the three iterations are the primary source for this sequence. No certified drawings, weld procedure, material certificate, sprocket stress analysis or endurance-test record is included.
+
+## Contribution boundary
+
+The original report identifies Pavan as the team leader. This repository does not claim that one person independently performed every design, procurement, machining, welding, electrical and test task. A task-by-task individual contribution matrix has not been supplied, so contributions are described at project/team level unless separately documented.
+
+## What the photographs establish
+
+- A physical motorcycle retrofit existed.
+- A BLDC motor, battery enclosure and chain-drive arrangement were installed on the motorcycle platform.
+- The team performed physical drivetrain modifications.
+- Workshop activity and a final prototype configuration are documented.
+
+## What the photographs do not establish
+
+- Measured top speed, acceleration or range.
+- Measured motor or drivetrain efficiency.
+- Safe operation at the reported maximum speed.
+- Fatigue life or durability of the custom sprocket, chain, weld or mounts.
+- Electrical protection, isolation or functional-safety compliance.
+- Roadworthiness certification or regulatory approval.
+
+## Evidence to add if recovered
+
+| Evidence item | Why it matters | Current state |
+|---|---|---|
+| Original CAD / fabrication drawings | Defines part geometry and interfaces | Not included |
+| Sprocket tooth count and pitch data for final build | Enables ratio and chain-kinematic reconstruction | Incomplete |
+| Gearbox ratio table | Needed to calculate wheel speed | Not included |
+| Tyre rolling circumference | Needed to convert wheel RPM to road speed | Not established |
+| GPS speed trace and calibration | Supports top-speed claim | Not included |
+| Battery voltage/current log and route record | Supports range and energy consumption | Not included |
+| Dynamometer torque/RPM trace | Supports output and efficiency claims | Not included |
+| Dated DVP result sheet | Separates planned tests from completed tests | Not included |
+
+The evidence status is intentionally conservative. A photo is evidence of physical work; it is not a substitute for a measurement record.
